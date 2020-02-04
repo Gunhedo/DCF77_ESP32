@@ -24,7 +24,7 @@
                           // const char* ssid = "YourOwnSSID";
                           // const char* password = "YourSoSecretPassword";
 
-#define ANTENNAPIN 15     // You MUST adapt this pin to your preferences
+#define ANTENNAPIN 26     // You MUST adapt this pin to your preferences
 #define LEDBUILTIN 5      // This is the pin for a Wemos board
 
 #define CONTINUOUSMODE // Uncomment this line to bypass the cron and have the transmitter on all the time
@@ -68,7 +68,7 @@ void setup() {
   ledcAttachPin(ANTENNAPIN, 0); // This Pin, or another one you choose, has to be attached to the antenna
 
   pinMode (LEDBUILTIN, OUTPUT);
-  digitalWrite (LEDBUILTIN, LOW); // LOW if LEDBUILTIN is inverted like in Wemos boards
+  digitalWrite (LEDBUILTIN, HIGH); // LOW if LEDBUILTIN is inverted like in Wemos boards
 
   WiFi_on();
   getNTP();
